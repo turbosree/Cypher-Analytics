@@ -1,0 +1,7 @@
+The goal of this project is to develop simple scripts to better learn cryptography techniques.
+
+1) Stream ciphers:
+-----------------
+EXP[1] Danger with many time pad stream cipher: Problem with using the same stream cypher key multiple times. 
+- CypherText.py: This script will help you to generate keys and cypher texts
+- CryptoUtils.py: This script will provide you tools and experiments to analyse the cypher. 
