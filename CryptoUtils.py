@@ -1,3 +1,20 @@
+#   Copyright (c) 2011 Sreejith Naarakathil
+# 
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, see <http://www.gnu.org/licenses/>.
+#
+# Description of module:
+# ----------------------
 # EXP[1] Danger with many time pad stream cipher: Problem with using the same stream cypher key multiple times. 
 # -------------------------------------------------------------------------------------------------------------
 # - Letter frequency analisys
@@ -19,6 +36,10 @@ TC=[]
 
 # Module init
 def init():
+    if len(CHEXE) == 0 or len(TCHEXE) == 0:
+        print "Input cipher texts not available!"
+        sys.exit()
+        
     for i in range(0, len(CHEXE)):
         C.append(CHEXE[i].decode('hex'))
         print type(CHEXE[i]),len(CHEXE[i]),len(C[i])
@@ -132,4 +153,4 @@ def ctoa(C):
     # return key.encode('hex') # Return key
 
 if __name__ == "__main__":
-    main()
+    ctoa(CHEXE)

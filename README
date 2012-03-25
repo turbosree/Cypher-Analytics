@@ -5,3 +5,7 @@ The goal of this project is to develop simple scripts to better learn cryptograp
 EXP[1] Danger with many time pad stream cipher: Problem with using the same stream cypher key multiple times. 
 - CypherText.py: This script will help you to generate keys and cypher texts
 - CryptoUtils.py: This script will provide you tools and experiments to analyse the cypher. 
+
+EXP[2] Brute-force attack or exhaustive key search: Analyze a weak PRG whose output can be predicted in roughly 2^28 time.
+- WeakPRG.py: With random seeds, each 28 bits, this algorithm will output 9 psuedo-random numbers.
+- BreakPRG.py: This experiment will predict it's 10th output in roughly 2^28 time.
