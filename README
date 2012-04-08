@@ -9,3 +9,10 @@ EXP[1] Danger with many time pad stream cipher: Problem with using the same stre
 EXP[2] Brute-force attack or exhaustive key search: Analyze a weak PRG whose output can be predicted in roughly 2^28 time.
 - WeakPRG.py: With random seeds, each 28 bits, this algorithm will output 9 psuedo-random numbers.
 - BreakPRG.py: This experiment will predict it's 10th output in roughly 2^28 time.
+
+2) Block ciphers:
+-----------------
+EXP[3] Generic birthday attack - SHA-256 case study: Collision resistence is necesary for security (Message Integrity)
+Let H:M→{0,1}^n be a hash function (|M| >> 2^n). There is an algorithm to find a collision in time O(2^(n/2)) hashes.
+
+- GenericBirthDayAttack.py: Consider the hash function obtained by truncating the output of SHA-256 to 50 bits, say H(x)=LSB50(SHA256(x)), that is we drop all but the right most 50 bits of the output. Our goal is to implement a generic birthday attack to find a collision on this hash function. Find two strings x≠y such that LSB50(SHA256(x))=LSB50(SHA256(y)).
