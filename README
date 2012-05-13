@@ -16,3 +16,18 @@ EXP[3] Generic birthday attack - SHA-256 case study: Collision resistence is nec
 Let H:M→{0,1}^n be a hash function (|M| >> 2^n). There is an algorithm to find a collision in time O(2^(n/2)) hashes.
 
 - GenericBirthDayAttack.py: Consider the hash function obtained by truncating the output of SHA-256 to 50 bits, say H(x)=LSB50(SHA256(x)), that is we drop all but the right most 50 bits of the output. Our goal is to implement a generic birthday attack to find a collision on this hash function. Find two strings x≠y such that LSB50(SHA256(x))=LSB50(SHA256(y)).
+
+EXP[4] Meet in the middle attack: Compute discrete log modulo a prime p.
+Let g be some element in Zp* (Set of invertible evlements in Zp = {0,1,2...,p-1}) and suppose we are given h in Zp∗ 
+such that h=g^x where 1≤x≤2^40. Our goal is to find x! We will use meet in the middle attack to find x.
+Let B=2^20. Since x is less than B2 we can write the unknown x base B as x=x0*B+x1 where x0,x1 are in the range [0,B−1]. 
+Then,
+   h=g^x=g^(x0*B+x1)=(g^B)^x0 * g^x1 in Zp.
+By moving the term g^x1 to the other side we obtain,
+   h/g^x1=(g^B)^x0 in Zp. From this equality, we can find (x0,x1) such that there is a collision between LHS and RHS.
+
+- mod_arithm.py:
+ *  First build a hash table of all possible values of the left hand side h/g^x1 for x1=0,1,…,2^20.
+ *  Then for each value x0=0,1,2,…,2^20 check if the right hand side (g^B)^x0 is in this hash table.
+ *  If a collision is found, then x = x0*B+x1
+To do modular arithmatic with large numbers, we will use gmpy.
