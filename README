@@ -31,3 +31,8 @@ By moving the term g^x1 to the other side we obtain,
  *  Then for each value x0=0,1,2,…,2^20 check if the right hand side (g^B)^x0 is in this hash table.
  *  If a collision is found, then x = x0*B+x1
 To do modular arithmatic with large numbers, we will use gmpy.
+
+3) Sample application to generate Key diversification test vectors conforming to NXP application note AN10922:
+--------------------------------------------------------------------------------------------------------------
+Refer section: 2.2.1 AES-128 key diversification example in NXP application note AN10922.
+https://www.nxp.com/docs/en/application-note/AN10922.pdf
