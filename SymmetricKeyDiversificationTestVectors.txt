@@ -1,0 +1,4 @@
+Master key [K] : 00112233445566778899aabbccddeeff
+Custum data 1 [CustumData1] : 0011223344556677
+Custum data 2 [CustumData2] : 001122334455667788990A0B0C0D0E0F1A1B
+Diversified Key [CMAC] : e8c8acaca203e458a49f500975033586
