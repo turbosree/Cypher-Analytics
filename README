@@ -36,3 +36,10 @@ To do modular arithmatic with large numbers, we will use gmpy.
 --------------------------------------------------------------------------------------------------------------
 Refer section: 2.2.1 AES-128 key diversification example in NXP application note AN10922.
 https://www.nxp.com/docs/en/application-note/AN10922.pdf
+
+4) Sample application to generate ECDSA signature test vectors for given inputs that conform to FIPS 186-4: Digital Signature Standard:
+---------------------------------------------------------------------------------------------------------------------------------------
+The signature uses ECDSA with SHA-256 and curve point NIST P-256 as specified in 'FIPS 186-4: Digital Signature Standard'. 
+
+Reference section: 3.3 Digital Signature Verification and Validation in FIPS 186-4: Digital Signature Standard.
+https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf
