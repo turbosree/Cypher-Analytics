@@ -1,4 +1,4 @@
-The goal of this project is to develop simple scripts to better learn cryptography techniques.
+The goal of this project is to develop a Cryptographic Toolkit for common applications of cryptography techniques in distributed embedded control systems.
 
 1) Stream ciphers:
 -----------------
