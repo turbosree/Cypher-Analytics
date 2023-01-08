@@ -44,10 +44,18 @@ The signature uses ECDSA with SHA-256 and curve point NIST P-256 as specified in
 Reference section: 3.3 Digital Signature Verification and Validation in FIPS 186-4: Digital Signature Standard.
 https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf
 
-5) An implementation of Shamir's Secret Sharing scheme for distributed embedded systems. The test application generates fragements of a secret (Eg: AES128 Key)
-# for the purpose of distributing it in a distributed embedded control system. TODO: Secure storage and trasport of secret cryptographic materials.
+5) An implementation of Shamir's Secret Sharing scheme for distributed embedded systems. The test application generates fragements of a secret (Eg: AES128 Key) 
+for the purpose of distributing it in a distributed embedded control system. TODO: Secure storage and trasport of secret cryptographic materials.
 
 Reference:
 https://github.com/twhiteman/pyDes
 https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing
 https://en.wikipedia.org/wiki/Key_checksum_value
+
+6) An implementation of generic software based cryptographic endorsement and attestation mechanism for distributed embedded systems. 
+The test application uses a combination of assymetric and symmetric cryptography techniques to establish an end-to-end verifiable trust 
+between any 2 independent entities in a distributed system. This also has applications in privacy by design patterns.
+
+Reference:
+https://en.wikipedia.org/wiki/Trusted_Platform_Module#Endorsement_keys
+https://en.wikipedia.org/wiki/Direct_Anonymous_Attestation
