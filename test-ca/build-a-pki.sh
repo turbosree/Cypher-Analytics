@@ -173,4 +173,8 @@ for kt in rsa ecdsa eddsa ; do
   cat $kt/client.cert $kt/inter.cert $kt/ca.cert > $kt/client.fullchain
 
   openssl asn1parse -in $kt/ca.cert -out $kt/ca.der > /dev/null
+  openssl asn1parse -in $kt/client.cert -out $kt/client.der > /dev/null
+  openssl asn1parse -in $kt/end.cert -out $kt/end.der > /dev/null
+  openssl asn1parse -in $kt/inter.cert -out $kt/inter.der > /dev/null
+
 done
