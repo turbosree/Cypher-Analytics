@@ -1,0 +1,14 @@
+[package]
+name = "ecdsa-signature"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+p256 = { version = "0.7.2", features = ["ecdsa"] }
+pkcs8 = { version = "0.7.5" }
+rand_core = { version = "0.5.1", features = ["getrandom"] }
+hex = "0.4.3"
+x509-parser = { version = "0.14.0", features = ["verify"] }
+pem = "1.1.1"

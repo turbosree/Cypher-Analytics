@@ -1,0 +1,131 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'ecdsa-signature'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=ecdsa-signature",
+                    "--package=ecdsa-signature"
+                ],
+                "filter": {
+                    "name": "ecdsa-signature",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'ecdsa-signature'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=ecdsa-signature",
+                    "--package=ecdsa-signature"
+                ],
+                "filter": {
+                    "name": "ecdsa-signature",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "run ecdsa-signature",
+            "program": "${workspaceFolder}\\target\\debug\\ecdsa-signature.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "sourceMap": {},
+            "sourceLanguages": [
+                "rust"
+            ],
+            "env": {
+                "RUST_BACKTRACE": "short",
+                "ALLUSERSPROFILE": "C:\\ProgramData",
+                "APPDATA": "C:\\Users\\SNAARAKA\\AppData\\Roaming",
+                "APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL": "1",
+                "CANoe_InstallDir": "C:\\Program Files\\Vector CANoe 15\\Exec64\\",
+                "CANoe_InstallDir64": "C:\\Program Files\\Vector CANoe 15\\Exec64\\",
+                "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\LOCAL\\crashpad_10444_RJALEAACAWRWFUMB",
+                "CommonProgramFiles": "C:\\Program Files\\Common Files",
+                "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+                "CommonProgramW6432": "C:\\Program Files\\Common Files",
+                "COMPUTERNAME": "5CG0510YKP",
+                "ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
+                "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+                "ELECTRON_RUN_AS_NODE": "1",
+                "FMS_HOME": "C:\\Program Files\\Siemens\\Tccs\\tccs",
+                "HOME": "C:\\Users\\SNAARAKA",
+                "HOMEDRIVE": "C:",
+                "HOMEPATH": "\\Users\\SNAARAKA",
+                "JAVA_TOOL_OPTIONS": "-Djava.vendor=\"New Oracle\"",
+                "JT_OGL45": "1",
+                "LOCALAPPDATA": "C:\\Users\\SNAARAKA\\AppData\\Local",
+                "LOGONSERVER": "\\\\GOTSVW1038",
+                "NEXTHINK": "C:\\Program Files\\Nexthink\\Collector",
+                "NUMBER_OF_PROCESSORS": "8",
+                "OneDrive": "C:\\home\\OneDrive\\OneDrive - Volvo Cars",
+                "OneDriveCommercial": "C:\\home\\OneDrive\\OneDrive - Volvo Cars",
+                "ORIGINAL_XDG_CURRENT_DESKTOP": "undefined",
+                "OS": "Windows_NT",
+                "Path": "C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Vector CANdb++ 3.1\\Exec32;C:\\Program Files (x86)\\Gpg4win\\..\\GnuPG\\bin;C:\\Program Files\\Siemens\\TcVis12.4\\Products\\Mockup\\ClearanceDB;C:\\Users\\SNAARAKA\\.cargo\\bin;C:\\Users\\SNAARAKA\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\SNAARAKA\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\home\\tools\\msys64\\mingw64\\bin;C:\\home\\tools\\msys64\\usr\\bin",
+                "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+                "PICO_DRIVER": "C:\\Program Files\\Vector_CANoe_CANalyzer_Scope\\Drivers",
+                "PROCESSOR_ARCHITECTURE": "AMD64",
+                "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+                "PROCESSOR_LEVEL": "6",
+                "PROCESSOR_REVISION": "8e0c",
+                "ProgramData": "C:\\ProgramData",
+                "ProgramFiles": "C:\\Program Files",
+                "ProgramFiles(x86)": "C:\\Program Files (x86)",
+                "ProgramW6432": "C:\\Program Files",
+                "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files (x86)\\Microsoft Azure Information Protection\\Powershell",
+                "PUBLIC": "C:\\Users\\Public",
+                "SESSIONNAME": "Console",
+                "SystemDrive": "C:",
+                "SystemRoot": "C:\\WINDOWS",
+                "TCICV5_DIR": "C:\\Program Files\\Siemens\\Teamcenter12\\tcic",
+                "TCSSO_SESSION_AGENT_PATH": "C:\\Program Files\\Siemens\\Teamcenter12\\SecurityServicesSA",
+                "TCVIS_CLUSTER_PATH": "C:\\Program Files\\Siemens\\TcVis12.4\\Products\\Professional\\VisView.exe",
+                "TCVIS_ENABLE_GDA_EXPORT_INTEGRATED_MODE": "True",
+                "TCVIS_ENABLE_RIBBONS": "True",
+                "TC_JRE_HOME": "C:\\Program Files\\Siemens\\Tccs\\jre",
+                "TC_PORTAL_ROOT": "C:\\Program Files\\Siemens\\Teamcenter12\\portal",
+                "TELELOGIC_LICENSE_FILE": "19353@lic-rhapsody.vccnet.volvocars.net",
+                "TEMP": "C:\\Users\\SNAARAKA\\AppData\\Local\\Temp",
+                "TMP": "C:\\Users\\SNAARAKA\\AppData\\Local\\Temp",
+                "TNS_ADMIN": "C:\\ProgramData\\Oracle\\product\\client\\network\\admin",
+                "UATDATA": "C:\\WINDOWS\\CCM\\UATData\\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77",
+                "USERDNSDOMAIN": "VCCNET.VOLVOCARS.NET",
+                "USERDOMAIN": "VCCNET",
+                "USERDOMAIN_ROAMINGPROFILE": "VCCNET",
+                "USERNAME": "SNAARAKA",
+                "USERPROFILE": "C:\\Users\\SNAARAKA",
+                "VCC_TCVIS_SETTINGS_VERSION": "5.0",
+                "VSCODE_AMD_ENTRYPOINT": "vs/workbench/api/node/extensionHostProcess",
+                "VSCODE_CODE_CACHE_PATH": "C:\\Users\\SNAARAKA\\AppData\\Roaming\\Code\\CachedData\\97dec172d3256f8ca4bfb2143f3f76b503ca0534",
+                "VSCODE_CWD": "C:\\Users\\SNAARAKA\\AppData\\Local\\Programs\\Microsoft VS Code",
+                "VSCODE_HANDLES_UNCAUGHT_ERRORS": "true",
+                "VSCODE_IPC_HOOK": "\\\\.\\pipe\\8674bfbf0cfdd3e1f6c22acf1f52083e-1.74.3-main-sock",
+                "VSCODE_NLS_CONFIG": "{\"locale\":\"en-us\",\"availableLanguages\":{},\"_languagePackSupport\":true}",
+                "VSCODE_PID": "10444",
+                "windir": "C:\\WINDOWS",
+                "WORK_DIR": "C:\\temp\\TCIC_V5_tmp",
+                "__COMPAT_LAYER": "DetectorsAppHealth"
+            }
+        }
+    ]
+}

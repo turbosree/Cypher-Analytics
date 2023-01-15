@@ -53,7 +53,7 @@ openssl ecparam -name secp384r1 -out ecdsa/nistp384.pem
 
 openssl req -nodes \
           -x509 \
-          -newkey ec:ecdsa/nistp384.pem \
+          -newkey ec:ecdsa/nistp256.pem \
           -keyout ecdsa/ca.key \
           -out ecdsa/ca.cert \
           -sha256 \
