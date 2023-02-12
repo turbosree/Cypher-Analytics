@@ -59,3 +59,9 @@ entities in a distributed system. This also has applications in privacy by desig
 Reference:
 https://en.wikipedia.org/wiki/Trusted_Platform_Module#Endorsement_keys
 https://en.wikipedia.org/wiki/Direct_Anonymous_Attestation
+
+7) A test Root CA to generate X509 certificates. The attestation and edorsement applications described in (6) can read, describe and make use of the certificates 
+in the cryptographic operations.
+
+Referecene:
+https://en.wikipedia.org/wiki/Root_certificate
