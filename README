@@ -72,3 +72,12 @@ Reference:
 https://en.wikipedia.org/wiki/QR_code
 https://en.wikipedia.org/wiki/URL
 https://qrdate.org/
+
+9) Standard browsers and http libraries (curl, pthon requests etc.) do not send URL Fragments (part of URL that comes after #) to server. But by intercepting the URL, 
+an attacker can convert the URL fragment to URL query string and force the browser or library to send the information in fragment to the Server. In many cases the fragment
+contains security tokens, personally identifiable IDs and sensitive information which are not intended to be send to the server. Depending upon the criticality of 
+information leaked, such exploitations can lead to privacy issues.
+
+Reference: 
+https://curl.se/mail/lib-2011-11/0178.html
+https://what.thedailywtf.com/topic/19087/uri-fragment-sent-to-server/12
