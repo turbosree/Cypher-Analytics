@@ -43,5 +43,3 @@ if response.status_code == 200:
 else:
     print('Error:', response.status_code)
 
-# Output:
-# Refer document 'URL_Fragment_Vulnerability_exploitation_result.pdf'
