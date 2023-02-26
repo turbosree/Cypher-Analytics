@@ -65,3 +65,10 @@ in the cryptographic operations.
 
 Referecene:
 https://en.wikipedia.org/wiki/Root_certificate
+
+8) Dynamic QR Code based on dynamic URL generated using SHA256 hash, ECDSA signature and timestamp
+
+Reference:
+https://en.wikipedia.org/wiki/QR_code
+https://en.wikipedia.org/wiki/URL
+https://qrdate.org/
