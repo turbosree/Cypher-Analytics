@@ -81,3 +81,13 @@ information leaked, such exploitations can lead to privacy issues.
 Reference: 
 https://curl.se/mail/lib-2011-11/0178.html
 https://what.thedailywtf.com/topic/19087/uri-fragment-sent-to-server/12
+
+10) Dynamic QR Code based on dynamic URL generated using TOTP (Time-based one-time password)
+
+Reference:
+https://en.wikipedia.org/wiki/Time-based_one-time_password
+
+11) Dynamic QR Code based on dynamic URL generated using JWT(JSON_Web_Token)
+
+Reference:
+https://en.wikipedia.org/wiki/JSON_Web_Token
