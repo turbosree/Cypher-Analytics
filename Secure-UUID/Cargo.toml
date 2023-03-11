@@ -1,0 +1,8 @@
+[package]
+name = "unique-id-generator"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+openssl = "0.10.36"
+hex = "0.4.3"
