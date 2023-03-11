@@ -91,3 +91,8 @@ https://en.wikipedia.org/wiki/Time-based_one-time_password
 
 Reference:
 https://en.wikipedia.org/wiki/JSON_Web_Token
+
+12) Secure UUID (A universally unique identifier) generator from X509 certificate
+
+Reference:
+https://en.wikipedia.org/wiki/Universally_unique_identifier
