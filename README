@@ -96,3 +96,10 @@ https://en.wikipedia.org/wiki/JSON_Web_Token
 
 Reference:
 https://en.wikipedia.org/wiki/Universally_unique_identifier
+
+13) The manual pairing code and QR code generation method in Matter specification has the vulnarability that it encodes the SPAKE2+ passcode in the method.
+The new method addresses the vulnarability by using a random code for manual pairing code.
+
+Reference:
+Matter 1.0 Core Specification: Table 38. Manual Pairing Code Elements, Table 34. Packing of the onboarding payload
+https://csa-iot.org/wp-content/uploads/2022/11/22-27349-001_Matter-1.0-Core-Specification.pdf
