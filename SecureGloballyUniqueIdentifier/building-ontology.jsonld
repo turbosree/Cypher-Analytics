@@ -1,0 +1,178 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/building-ontology/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+  },
+  "@id": "http://example.org/building-ontology",
+  "@type": "rdf:Ontology",
+  "@graph": [
+    {
+      "@id": "Building",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Building",
+      "rdfs:comment": "A building structure"
+    },
+    {
+      "@id": "Floor",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Floor",
+      "rdfs:comment": "A floor within a building"
+    },
+    {
+      "@id": "Room",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Room",
+      "rdfs:comment": "A room within a floor"
+    },
+    {
+      "@id": "Wall",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Wall",
+      "rdfs:comment": "A wall within a room"
+    },
+    {
+      "@id": "Door",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Door",
+      "rdfs:comment": "A door within a wall"
+    },
+    {
+      "@id": "Window",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Window",
+      "rdfs:comment": "A window within a wall"
+    },
+    {
+      "@id": "Material",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Material",
+      "rdfs:comment": "A material used in building components"
+    },
+    {
+      "@id": "Function",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Function",
+      "rdfs:comment": "The purpose of a room or equipment"
+    },
+    {
+      "@id": "Equipment",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Equipment",
+      "rdfs:comment": "Equipment contained within a room"
+    },
+    {
+      "@id": "hasFloor",
+      "@type": "rdf:Property",
+      "rdfs:label": "has floor",
+      "rdfs:domain": "Building",
+      "rdfs:range": "Floor"
+    },
+    {
+      "@id": "isPartOfBuilding",
+      "@type": "rdf:Property",
+      "rdfs:label": "is part of building",
+      "rdfs:domain": "Floor",
+      "rdfs:range": "Building"
+    },
+    {
+      "@id": "hasRoom",
+      "@type": "rdf:Property",
+      "rdfs:label": "has room",
+      "rdfs:domain": "Floor",
+      "rdfs:range": "Room"
+    },
+    {
+      "@id": "isPartOfFloor",
+      "@type": "rdf:Property",
+      "rdfs:label": "is part of floor",
+      "rdfs:domain": "Room",
+      "rdfs:range": "Floor"
+    },
+    {
+      "@id": "hasWall",
+      "@type": "rdf:Property",
+      "rdfs:label": "has wall",
+      "rdfs:domain": "Room",
+      "rdfs:range": "Wall"
+    },
+    {
+      "@id": "isPartOfRoom",
+      "@type": "rdf:Property",
+      "rdfs:label": "is part of room",
+      "rdfs:domain": "Wall",
+      "rdfs:range": "Room"
+    },
+    {
+      "@id": "hasDoor",
+      "@type": "rdf:Property",
+      "rdfs:label": "has door",
+      "rdfs:domain": "Wall",
+      "rdfs:range": "Door"
+    },
+    {
+      "@id": "isPartOfWall",
+      "@type": "rdf:Property",
+      "rdfs:label": "is part of wall",
+      "rdfs:domain": "Door",
+      "rdfs:range": "Wall"
+    },
+    {
+      "@id": "hasWindow",
+      "@type": "rdf:Property",
+      "rdfs:label": "has window",
+      "rdfs:domain": "Wall",
+      "rdfs:range": "Window"
+    },
+    {
+      "@id": "isPartOfWall_Window",
+      "@type": "rdf:Property",
+      "rdfs:label": "is part of wall",
+      "rdfs:domain": "Window",
+      "rdfs:range": "Wall"
+    },
+    {
+      "@id": "servesFunction",
+      "@type": "rdf:Property",
+      "rdfs:label": "serves function",
+      "rdfs:domain": "Room",
+      "rdfs:range": "Function"
+    },
+    {
+      "@id": "containsEquipment",
+      "@type": "rdf:Property",
+      "rdfs:label": "contains equipment",
+      "rdfs:domain": "Room",
+      "rdfs:range": "Equipment"
+    },
+    {
+      "@id": "equipmentServesFunction",
+      "@type": "rdf:Property",
+      "rdfs:label": "equipment serves function",
+      "rdfs:domain": "Equipment",
+      "rdfs:range": "Function"
+    },
+    {
+      "@id": "isPartOfBuilding_Function",
+      "@type": "rdf:Property",
+      "rdfs:label": "is part of building",
+      "rdfs:domain": "Function",
+      "rdfs:range": "Building"
+    },
+    {
+      "@id": "isPartOfFloor_Function",
+      "@type": "rdf:Property",
+      "rdfs:label": "is part of floor",
+      "rdfs:domain": "Function",
+      "rdfs:range": "Floor"
+    },
+    {
+      "@id": "isPartOfRoom_Function",
+      "@type": "rdf:Property",
+      "rdfs:label": "is part of room",
+      "rdfs:domain": "Function",
+      "rdfs:range": "Room"
+    }    
+  ]
+}
+
