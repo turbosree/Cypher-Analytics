@@ -103,3 +103,10 @@ The new method addresses the vulnarability by using a random code for manual pai
 Reference:
 Matter 1.0 Core Specification: Table 38. Manual Pairing Code Elements, Table 34. Packing of the onboarding payload
 https://csa-iot.org/wp-content/uploads/2022/11/22-27349-001_Matter-1.0-Core-Specification.pdf
+
+14) Globally unique identifiers: URIs provide a way to create globally unique identifiers for resources, ensuring that there are no conflicts or ambiguities between 
+different datasets or systems. Eg: https://example.org/floors/1547809435. The example generates GUIDs for all the entities in a Building ontology.
+
+Reference:
+https://en.wikipedia.org/wiki/Ontology
+https://en.wikipedia.org/wiki/Universally_unique_identifier
