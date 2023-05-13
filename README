@@ -110,3 +110,9 @@ different datasets or systems. Eg: https://example.org/floors/1547809435. The ex
 Reference:
 https://en.wikipedia.org/wiki/Ontology
 https://en.wikipedia.org/wiki/Universally_unique_identifier
+
+15) A simple key store that securely stores cryptographic keys in a json file using a password.
+Usage: python .\SimpleKeyStore.py af787sas7dfa78s6a7sd7asfa my_api_key_1
+
+Reference:
+https://en.wikipedia.org/wiki/Key_management
