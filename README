@@ -116,3 +116,8 @@ Usage: python .\SimpleKeyStore.py af787sas7dfa78s6a7sd7asfa my_api_key_1
 
 Reference:
 https://en.wikipedia.org/wiki/Key_management
+
+16) WeakPRG: How miss use or wrong selection of algorithms can result in weak PRG or waek cypher text.
+
+https://csrc.nist.gov/glossary/term/entropy#:~:text=A%20measure%20of%20the%20amount,the%20value%20of%20a%20secret.
+
