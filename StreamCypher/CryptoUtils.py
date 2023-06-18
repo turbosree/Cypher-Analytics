@@ -37,14 +37,16 @@ TC=[]
 # Module init
 def init():
     if len(CHEXE) == 0 or len(TCHEXE) == 0:
-        print "Input cipher texts not available!"
+        print("Input cipher texts not available!")
         sys.exit()
         
     for i in range(0, len(CHEXE)):
-        C.append(CHEXE[i].decode('hex'))
-        print type(CHEXE[i]),len(CHEXE[i]),len(C[i])
-    TC.append(TCHEXE.decode('hex'))
-    print type(TCHEXE),len(TCHEXE),len(TC[0])
+        #C.append(CHEXE[i].decode('hex'))
+        C.append(bytes.fromhex(CHEXE[i]))
+        print(type(CHEXE[i]),len(CHEXE[i]),len(C[i]))
+    #TC.append(TCHEXE.decode('hex'))
+    TC.append(bytes.fromhex(CHEXE[i]))
+    print(type(TCHEXE),len(TCHEXE),len(TC[0]))
 
 # Utilities
 def toStr(s):
@@ -54,7 +56,8 @@ def strxor(a, b):     # xor two strings of different lengths
     if len(a) > len(b):
         return "".join([chr(ord(x) ^ ord(y)) for (x, y) in zip(a[:len(b)], b)])
     else:
-        return "".join([chr(ord(x) ^ ord(y)) for (x, y) in zip(a, b[:len(a)])])
+        #return "".join([chr(ord(x) ^ ord(y)) for (x, y) in zip(a, b[:len(a)])])
+        return bytes([x ^ y for (x, y) in zip(a, b[:len(a)])]).decode('utf-8')
 
 def ctxor(c,l=10):
     r=c[0]
@@ -70,9 +73,9 @@ def random(size=16):
 
 def encrypt(key, msg):
     c = strxor(key, msg)
-    print
-    print c.encode('hex')
-    return c
+    byte_string = c.encode('utf-8')
+    print(byte_string.hex())
+    return byte_string.hex()
 
 def letterfreq(C,m1,m2):
     pc=string.ascii_letters
@@ -99,14 +102,14 @@ def ctoa(C):
     lfa=[]
     k=[]
     sp=" "*1024
-    print "sp: "+sp.encode('hex')+" sp len: "+str(len(sp))
+    #print("sp: "+sp.encode('hex')+" sp len: "+str(len(sp)))
     for p in range(0,1024):
         k.append(chr(0))
     for j in range(0,10):
         for i in range(j+1,10):
             lfa.append((letterfreq(C,j,i),i))
-            print "Letter frequency analisys ("+"m"+str(j)+"XOR"+"m"+str(i)+"): "+" lfa len: "+str(len(lfa))+":"
-            print lfa[len(lfa)-1]
+            print("Letter frequency analisys ("+"m"+str(j)+"XOR"+"m"+str(i)+"): "+" lfa len: "+str(len(lfa))+":")
+            print(lfa[len(lfa)-1])
     # For every profile (45), perform mXORmXORsp
     for h in range(0,len(lfa)):
         msg=strxor(lfa[h][0][1],sp)
@@ -125,7 +128,7 @@ def ctoa(C):
                 # print "StrLen: "+str(len(k))+" "+str(len(msg))+" "+str(len(C))+" "+str(len(C[ci]))
                 # print ti,k[ti],msg[ti],C[ci][ti]
                 k[ti]=strxor(msg[ti],C[ci][ti])
-                print "Predicting k["+str(ti)+"]: "+hex(ord(k[ti]))
+                print("Predicting k["+str(ti)+"]: "+hex(ord(k[ti])))
                 # Check if our prediction is correct with all profiles of mhXORmx. m0XORm1,m0XORm2, etc.
                 for x in range(h+1, 10):
                     msgx=strxor(lfa[x-1][0][1],sp)
@@ -135,20 +138,20 @@ def ctoa(C):
                     if ti<len(msgx) and ti<len(C[x]) and ti<len(k):
                         if strxor(msgx[ti],k[ti])==C[x][ti]:
                             # print strxor(msgx[ti],k[ti])==C[x][ti]
-                            print "Prediction seems to be correct! Fix k["+str(ti)+"]: "+hex(ord(k[ti]))
+                            print("Prediction seems to be correct! Fix k["+str(ti)+"]: "+hex(ord(k[ti])))
                         else:
                             k[ti]=chr(0)
-                            print "Prediction seems to be wrong! Ignore k["+str(ti)+"]!"
+                            print("Prediction seems to be wrong! Ignore k["+str(ti)+"]!")
                             break
     key=""
     # print len(k)
     for y in range(0, len(k)):
         key=key+k[y]
     # print len(key)
-    print "Target cipher: "+TC[0]
+    #print("Target cipher: "+TC[0])
     tm=strxor(TC[0],key)
-    print "Target cipher decryption: "+tm
-    print "Len of decrypted msg: "+str(len(tm))
+    print("Target cipher decryption: "+tm)
+    print("Len of decrypted msg: "+str(len(tm)))
     return tm.encode('hex')
     # return key.encode('hex') # Return key
 
