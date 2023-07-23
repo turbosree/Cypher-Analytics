@@ -1,6 +1,10 @@
+
 # A simple key store that securely stores cryptographic keys.
 # NOTE: Do not use it in production environments
 # Usage: python .\SimpleKeyStore.py af787sas7dfa78s6a7sd7asfa my_api_key_1
+# Usage: python .\SimpleKeyStore.py "This is the data to be encrypted and decrypted." my_secret_slot_1
+# IMPORTANT: Make sure to clear the command line history after running this script. 
+# Otherwise, the secret data will be stored in the command line history.
 # author: sreejith.naarakathil@gmail.com 
 
 import os
@@ -71,11 +75,11 @@ def save_encrypted_data(key_slot_id, encrypted_data):
     key_store[key_slot_id] = base64.b64encode(encrypted_data).decode()
 
     # Save the updated key store to the file
-    with open("key_store.json", "w") as outfile:
+    with open("C:\home\MyGITHUBRepo\Cypher-Analytics\SimpleKeyStore\key_store.json", "w") as outfile:
         json.dump(key_store, outfile)
 
 def load_encrypted_data(key_slot_id):
-    with open("key_store.json", "r") as infile:
+    with open("C:\home\MyGITHUBRepo\Cypher-Analytics\SimpleKeyStore\key_store.json", "r") as infile:
         loaded_key_store = json.load(infile)
         encrypted_data = base64.b64decode(loaded_key_store[key_slot_id])
     return encrypted_data
