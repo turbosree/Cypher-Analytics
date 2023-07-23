@@ -176,5 +176,9 @@ for kt in rsa ecdsa eddsa ; do
   openssl asn1parse -in $kt/client.cert -out $kt/client.der > /dev/null
   openssl asn1parse -in $kt/end.cert -out $kt/end.der > /dev/null
   openssl asn1parse -in $kt/inter.cert -out $kt/inter.der > /dev/null
+done
 
+for kt in ecdsa ; do
+  openssl ec -in $kt/end.key -outform PEM -out $kt/end.pem
+  openssl x509 -in $kt/end.cert -outform PEM -out $kt/end-cert.pem
 done
