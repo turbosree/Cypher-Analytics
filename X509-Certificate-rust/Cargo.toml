@@ -1,0 +1,10 @@
+[package]
+name = "x509-key-extraction"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+openssl = "0.10.45"
+hex = "0.4.2"
+rustls = "0.18.0"
+webpki = "0.21.4"
