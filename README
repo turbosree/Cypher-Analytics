@@ -121,3 +121,8 @@ https://en.wikipedia.org/wiki/Key_management
 
 https://csrc.nist.gov/glossary/term/entropy#:~:text=A%20measure%20of%20the%20amount,the%20value%20of%20a%20secret.
 
+17) A security mechanism model for key exchange ceremony in a distributed embedded control system.
+# TODO: Secure storage and trasport of secret cryptographic materials
+
+18) A security mechanism model for using BLE Beacon as a secure wakeup mechanism for usecases such as wake up and connect to sensors 
+in a distributed embedded system for setup and configuration assistance.
