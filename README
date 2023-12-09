@@ -126,3 +126,5 @@ https://csrc.nist.gov/glossary/term/entropy#:~:text=A%20measure%20of%20the%20amo
 
 18) A security mechanism model for using BLE Beacon as a secure wakeup mechanism for usecases such as wake up and connect to sensors 
 in a distributed embedded system for setup and configuration assistance.
+
+19) A security mechanism model for managing distributed symmetric keys. The challenge in this case is to securely generate and distribute symmetric keys in multiple nodes/cliets/devices. 
