@@ -1,0 +1,32 @@
+OpenSSL Key Wrapping
+
+The protection of encryption keys is important, and they often have to be protected. This is especially important for symmetric keys and the private key of a public key pair. Two standards for this are RFC3394 and RFC 5649. These support the Advanced Encryption Standard (AES) Key Wrap algorithm [AES-KW1, AES-KW2].
+It is very important to make sure that the command is deleted from the terminal command history.
+
+Commands:
+openssl rand 128 > 1.key
+xxd 1.key
+openssl enc -aes-128-wrap -in 1.key  -out 1.key.wrp -pass pass:Sreejith123 -pbkdf2
+xxd 1.key.wrp
+
+Generating random 128-bit
+00000000: 9d77 ce1e 7a31 450b fd5f 68a2 e031 af28  .w..z1E.._h..1.(
+00000010: 4446 b54d dc7a fa50 1860 dd12 3eb7 a64e  DF.M.z.P.`..>..N
+00000020: c16b 1323 2add 52dc 2de1 8718 d62c a80a  .k.#*.R.-....,..
+00000030: 6e45 4d1b 1bd6 b51e 26ee 559e ae2e 1b7d  nEM.......U....}
+00000040: 05cf dd89 fb42 dda1 3b52 4936 7a81 f9d1  .....B..;RI6z...
+00000050: cf5b 7d7a 06c5 a306 973e 1ba9 56c0 a748  .[}z.....>..V..H
+00000060: 972e e229 c978 a337 e762 fb00 242b bfee  ...).x.7.b...#36;+..
+00000070: a614 036b 704a 9491 2959 6200 3785 092a  ...kpJ..)Yb.7..*
+====  
+Wrapping the key with "Sreejith123"
+00000000: 5361 6c74 6564 5f5f 8fa4 d0e5 b199 c829  Salted__.......)
+00000010: 2b0c 015f 5d41 b20b 3d0d 1665 5355 5afe  +.._]A..=..eSUZ.
+00000020: 18ba abd7 b3fc feae e51e 794f a20b 1076  ..........yO...v
+00000030: 8c93 cecc e18b aca1 01f4 bafc 8e86 1b4e  ...............N
+00000040: b1c6 fb2d fec2 c4ad 955a f78a 7c53 94ca  ...-.....Z..|S..
+00000050: 5a49 d3f6 57d9 929c 0ef1 71dd 71f6 2ad9  ZI..W.....q.q.*.
+00000060: 64c7 b437 db90 d092 3621 4ad3 67fb c034  d..7....6!J.g..4
+00000070: 96f4 838a c753 2658 13fd 9e0d 9f93 df6f  .....S.X.......o
+00000080: 0701 f02f 882f 91c5 7609 08bc c548 6c98  ..././..v....Hl.
+00000090: 8365 6b88 fc84 b8bb                      .ek.....
