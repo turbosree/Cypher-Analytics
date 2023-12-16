@@ -128,3 +128,7 @@ https://csrc.nist.gov/glossary/term/entropy#:~:text=A%20measure%20of%20the%20amo
 in a distributed embedded system for setup and configuration assistance.
 
 19) A security mechanism model for managing distributed symmetric keys. The challenge in this case is to securely generate and distribute symmetric keys in multiple nodes/cliets/devices. 
+
+20) The protection of encryption keys is important, and they often have to be protected. This is especially important for symmetric keys and the private key of a public key pair. Two standards for this are RFC3394 and RFC 5649. These support the Advanced Encryption Standard (AES) Key Wrap algorithm [AES-KW1, AES-KW2].
+
+Reference: https://asecuritysite.com/openssl/openssl_keywrap
