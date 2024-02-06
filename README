@@ -133,3 +133,7 @@ in a distributed embedded system for setup and configuration assistance.
 The basic idea is to create a derived key from the base master key (The symmetric key that needs protection) using a known salt and secret pass phrase. 
 
 Reference: https://asecuritysite.com/openssl/openssl_keywrap
+
+21) With JWT we can encrypt our data, using 128-bit, 192-bit or 256-bit AES encryption. This is expecially needed when you need authenticated encryption for exchanging confidential claims (Claims that have personal data or secrets).
+
+Reference: https://asecuritysite.com/jwt/jwt_python_encrypt
