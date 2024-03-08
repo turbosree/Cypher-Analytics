@@ -137,3 +137,7 @@ Reference: https://asecuritysite.com/openssl/openssl_keywrap
 21) With JWT we can encrypt our data, using 128-bit, 192-bit or 256-bit AES encryption. This is expecially needed when you need authenticated encryption for exchanging confidential claims (Claims that have personal data or secrets).
 
 Reference: https://asecuritysite.com/jwt/jwt_python_encrypt
+
+22) Cyber security related definitions from popular legal and regulatory text
+
+Reference: https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Digital+Homepage
