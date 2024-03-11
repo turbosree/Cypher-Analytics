@@ -141,3 +141,9 @@ Reference: https://asecuritysite.com/jwt/jwt_python_encrypt
 22) Cyber security related definitions from popular legal and regulatory text
 
 Reference: https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Digital+Homepage
+
+23) Selective disclosure JWT attestation for privacy by design use cases
+
+Use cases:
+Selectively disclosing personal data.
+Zero knowledge proof.
